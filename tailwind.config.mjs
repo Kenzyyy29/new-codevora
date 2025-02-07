@@ -6,10 +6,23 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container:{
+      center: true,
+      padding: "15px",
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+       primary: "#354da1",
+       secondary: "#59668a",
+       tulang: "#f4f4f4",
+       hitam: "#1e1e1e",
       },
     },
   },
