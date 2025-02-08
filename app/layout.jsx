@@ -1,9 +1,16 @@
-
+import {Ubuntu} from "next/font/google"
 import "./globals.css";
 
 // Components
 import Header from "@/components/Header";
 import FooterWithSocialLinks from "@/components/Footer";
+
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700",],
+  style: ["normal", "italic"],
+  variable: "--font-ubuntu",
+}) 
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-hitam text-tulang">
+      <body className="bg-hitam text-tulang font-source-code">
         <Header/>
         {children}
         <FooterWithSocialLinks/>

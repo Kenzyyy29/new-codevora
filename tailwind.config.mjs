@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 export default {
  content: [
   "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,6 +19,9 @@ export default {
    xl: "1280px",
    "2xl": "1536px",
   },
+  fontFamily: {
+   "source-code": [`"Source Code Pro"`, `monospace`],
+  },
   extend: {
    colors: {
     primary: "#354da1",
@@ -26,5 +31,16 @@ export default {
    },
   },
  },
- plugins: [],
+ plugins: [
+  plugin(function ({matchUtilities, theme}) {
+   matchUtilities(
+    {
+     "animate-duration": (value) => ({
+      animationDuration: value,
+     }),
+    },
+    {values: theme("transitionDuration")}
+   );
+  }),
+ ],
 };
