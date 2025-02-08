@@ -1,5 +1,13 @@
 const Logo = () => {
- return <div className="text-tulang font-bold italic text-4xl ">LOGO</div>;
+ return (
+  <div>
+   <img
+    src="/Logos/1.png"
+    alt=""
+    className="h-8 my-auto"
+   />
+  </div>
+ );
 };
 
 export default Logo;
