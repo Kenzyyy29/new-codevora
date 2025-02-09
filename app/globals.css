@@ -3,3 +3,29 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+.neon-line {
+  width: 300px;
+  height: 4px;
+  background-color: #f4f4f4;
+  border-radius: 2px;
+  position: relative;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 5px #354da1, 0 0 10px #354da1, 0 0 15px #354da1;
+  }
+  100% {
+    box-shadow: 0 0 20px #354da1, 0 0 30px #354da1, 0 0 40px #354da1;
+  }
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}

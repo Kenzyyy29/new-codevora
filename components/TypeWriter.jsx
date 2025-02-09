@@ -4,11 +4,11 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const TypewriterText = () => {
   return (
-   <div className="text-2xl font-mono text-center">
+   <div className="text-2xl font-source-code text-center">
     <Typewriter
      words={[
       "The Best Digital Solution for all of your own bussiness needs.",
-      "Enjoy your stay!"
+      "Enjoy your stay!",
      ]}
      loop={5} // jumlah pengulangan
      cursor

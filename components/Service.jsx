@@ -6,12 +6,12 @@ const Service = () => {
     <h3 className="font-bold text-2xl mb-8 text-gray-400">Offline Sale</h3>
     <Link href="/cekatan-pos">
      <h1 className="block text-xl font-semibold hover:underline mb-3 text-hitam">
-      Sellaris POS
+        Website Creation
      </h1>
     </Link>
     <Link href="/cekatan-order">
      <h1 className="block text-xl font-semibold hover:underline text-hitam">
-      Sellaris Order
+      App Creation
      </h1>
     </Link>
    </div>
