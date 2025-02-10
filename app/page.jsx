@@ -65,7 +65,7 @@ export default function Home() {
    </section>
 
    <section className="h-screen bg-[radial-gradient(ellipse_65%_75%_at_right,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5">
-    <div className="flex flex-row gap-[200px] justify-center">
+    <div className="flex flex-col lg:flex-row gap-[100px] lg:gap-[200px] justify-center items-center">
      <div className="flex flex-col gap-5 max-w-[400px]">
       <h1 className="text-tulang text-4xl font-bold">
        KAMI MEMILIKI TUJUAN UNTUK BLABLABLA
@@ -81,7 +81,7 @@ export default function Home() {
      <img
       src="/Logos/1.png"
       alt=""
-      className="h-[300px]"
+      className="h-[200px] w-[350px] lg:h-[300px] lg:w-[500px]"
      />
     </div>
    </section>
@@ -91,7 +91,7 @@ export default function Home() {
      <div className="flex flex-col gap-3">
       <h1 className="text-3xl font-bold">{ProjectCard.title}</h1>
      </div>
-     <ul className="flex flex-row gap-10 justify-center hover:cursor-pointer">
+     <ul className="flex flex-col lg:flex-row gap-10 justify-center hover:cursor-pointer items-center">
       {ProjectCard.items.map((item, index) => (
        <li key={index}>
         <div className="  p-2 w-[250px] h-[300px] rounded-lg flex flex-col gap-5">
@@ -109,10 +109,8 @@ export default function Home() {
     </div>
    </section>
 
-   <hr className="h-px mx-56 my-1 bg-gray-500 border-0" />
-
    {/* Partner Journey */}
-   <section className="h-auto py-5">
+   <section className="h-screen py-5">
     <div className="text-center flex flex-col gap-10">
      <div className="flex flex-col gap-3">
       <h1 className="text-3xl font-bold">{Partner.title}</h1>
@@ -132,8 +130,6 @@ export default function Home() {
      </button>
     </div>
    </section>
-
-   <hr className="h-px mx-56 my-1 bg-gray-500 border-0" />
 
    {/* Review */}
    <section className="h-screen py-5">

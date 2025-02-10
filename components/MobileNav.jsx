@@ -64,10 +64,10 @@ const MobileNav = () => {
      })}
     </nav>
     {/*Button*/}
-    <button className="flex rounded-lg px-3 py-1 bg-tulang hover:bg-[#dedddd]">
+    <button className="flex rounded-lg px-3 py-1 bg-tulang hover:bg-[#dedddd] mx-auto">
      <Link
       href="/login"
-      className=" text-hitam">
+      className=" text-hitam text-xl">
       Become a partner?
      </Link>
     </button>
