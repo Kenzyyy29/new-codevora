@@ -1,6 +1,10 @@
-"use client";
 import Link from "next/link";
+
+//components
 import Logo from "./Logo";
+import Nav from "./Nav";
+import MobileNav from "./MobileNav";
+
 const Header = () => {
  return (
   <header className="sticky z-10 top-0 flex p-4 justify-between bg-hitam bg-opacity-95 backdrop-blur-md text-tulang px-[40px] mx-auto border-b border-gray-500">
@@ -16,16 +20,18 @@ const Header = () => {
     </Link>
 
     {/*Nav*/}
-    <ul className="flex space-x-10 text-white my-auto text-base font-semibold">
-     <Link href="/services">Services</Link>
-     <Link href="/about">About Us</Link>
-     <Link href="/">Product</Link>
-     <Link href="/">Career</Link>
+    <ul className="hidden lg:flex space-x-10 text-white my-auto text-base font-semibold">
+     <Nav />
     </ul>
    </div>
 
+   {/*Mobile Nav*/}
+   <div className="lg:hidden">
+    <MobileNav />
+   </div>
+
    {/*Button*/}
-   <button className="rounded-lg px-3 py-1 bg-tulang hover:bg-[#dedddd]">
+   <button className="hidden lg:flex rounded-lg px-3 py-1 bg-tulang hover:bg-[#dedddd]">
     <Link
      href="/login"
      className=" text-hitam">
