@@ -25,6 +25,59 @@ const Icon = {
  ],
 };
 
+const services = {
+ title: "OUR SERVICES",
+ items: [
+  {
+   name: "Website Development",
+   path: "/services",
+  },
+  {
+   name: "Mobile App Development",
+   path: "/services",
+  },
+  {
+   name: "E-Commerce Solutions",
+   path: "/services",
+  },
+  {
+   name: "SEO and Digital Marketing",
+   path: "/services",
+  },
+  {
+   name: "Maintenance and Support",
+   path: "/services",
+  },
+  {
+   name: "IT Consulting",
+   path: "/services",
+  },
+ ],
+};
+
+const profile = {
+ title: "COMPANY PROFILE",
+ items: [
+  {
+   name: "About Us",
+   path: "/About",
+  },
+  {
+   name: "Product",
+   path: "/product",
+  },
+  {
+   name: "Career",
+   path: "/career",
+  },
+  {
+   name: "Contact Us",
+   path: "/contact",
+  },
+ ],
+};
+
+
 import Link from "next/link";
 
 const currentYear = new Date().getFullYear();
@@ -33,21 +86,21 @@ export default function FooterWithSocialLinks() {
  return (
   <footer className="flex flex-wrap justify-center py-10 px-10 bg-hitam border-t border-gray-500 shadow-md text-tulang">
    {/* Section 1 */}
-   <div className="flex flex-col justify-start py-5 px-2 lg:basis-[20%] md:basis-[35%] basis-[100%] ">
+   <div className="flex flex-col justify-start py-5 px-2 lg:basis-[20%] md:basis-[35%] basis-[100%] items-center">
     {/* Gambar */}
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-col gap-4 justify-center">
      <img
       src="/Logos/1.png"
-      className="w-[70%]"
+      className="w-[70%] mx-auto"
       alt="Logo Footer"
      />
     </div>
-    {/* Deskripsi */}
-    <div className="flex flex-row text-center">
+    <div className="flex flex-row text-center max-w-[200px]">
      <p className="lg:text-sm text-xs font-thin pt-5 2xl:ml-2 lg:ml-2 ml-3">
-      SOLUSI DIGITAL TERBAIK UNTUK SEGALA KEBUTUHAN BISNIS ANDA
+      THE BEST DIGITAL SOLUTION FOR ALL OF YOUR OWN BUSSINESS NEEDS
      </p>
     </div>
+    {/* Deskripsi */}
    </div>
 
    {/* Section 2 */}
@@ -55,12 +108,12 @@ export default function FooterWithSocialLinks() {
     {/* #1 Alamat Kami */}
     <div className=" flex flex-col gap-1">
      <div className="flex flex-row justify-start">
-      <h1 className="text-lg font-bold text-start">ALAMAT KAMI</h1>
+      <h1 className="text-lg font-bold text-start">OUR ADDRESS</h1>
      </div>
      <div className="flex flex-row justify-start">
       <p className="text-sm font-light text-start">
-       Jl. Arthamulya 01 No. 29 Kecamatan Cibereum Kelurahan Kotabaru Kota
-       Tasikmalaya Jawa Barat 46196.
+       Jl. Arthamulya 01, No. 29, Kecamatan Cibereum, Kelurahan Kotabaru, Kota
+       Tasikmalaya, Jawa Barat, Indonesia 46196.
       </p>
      </div>
     </div>
@@ -74,7 +127,7 @@ export default function FooterWithSocialLinks() {
        <Link
         key={index}
         href={item.path}>
-        <li className=" inline-block rounded-full bg-tulang p-5 leading-normal shadow-md focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+        <li className=" inline-block rounded-full bg-tulang hover:bg-tulang/60 p-5 leading-normal shadow-md focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
          <div className="text-hitam text-[25px]">{item.icon}</div>
         </li>
        </Link>
@@ -89,63 +142,39 @@ export default function FooterWithSocialLinks() {
     <ul>
      {/* Title */}
      <li>
-      <h1 className="text-lg font-bold text-start mb-1">LAYANAN KAMI</h1>
+      <h1 className="text-lg font-bold text-start mb-1">{services.title}</h1>
      </li>
      {/* Content */}
-     <Link href="#">
-      <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
-       Pembuatan Website
-      </li>
-     </Link>
-     <Link href="#">
-      <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
-       Pembuatan Mobile App
-      </li>
-     </Link>
-     <Link href="#">
-      <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
-       Desain UI/UX
-      </li>
-     </Link>
-     <Link href="#">
-      <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
-       Konsultasi
-      </li>
-     </Link>
-     <Link href="#">
-      <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
-       Program Kemitraan
-      </li>
-     </Link>
+     {services.items.map((item, index) => (
+      <ul key={index}>
+       <Link href={item.path}>
+        <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
+         {item.name}
+        </li>
+       </Link>
+      </ul>
+     ))}
     </ul>
    </div>
 
    {/* Section 4 */}
-   <div className="flex flex-col justify-start py-5 px-5 lg:basis-[25%] md:basis-[50%] basis-[100%] ">
+   <div className="flex flex-col justify-start py-5 px-5 lg:basis-[20%] md:basis-[50%] basis-[100%] ">
     {/*Layanan*/}
     <ul>
      {/* Title */}
      <li>
-      <h1 className="text-lg font-bold text-start mb-1">PROFIL PERUSAHAAN</h1>
+      <h1 className="text-lg font-bold text-start mb-1">{profile.title}</h1>
      </li>
      {/* Content */}
-     <Link href="/about">
-      <li className="mb-3 font-thin text-start hover:text-blue-300">
-       Tentang Kami
-      </li>
-     </Link>
-     <Link href="/product">
-      <li className="mb-3 font-thin text-start hover:text-blue-300">Produk</li>
-     </Link>
-     <Link href="/career">
-      <li className="mb-3 font-thin text-start hover:text-blue-300">Karir</li>
-     </Link>
-     {/* Direct Link External */}
-     <Link href="https://wa.me/6282295533992">
-      <li className="mb-3 font-thin text-start hover:text-blue-300">
-       Hubungi Kami
-      </li>
-     </Link>
+     {profile.items.map((item, index) => (
+      <ul key={index}>
+       <Link href={item.path}>
+        <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
+         {item.name}
+        </li>
+       </Link>
+      </ul>
+     ))}
     </ul>
    </div>
   </footer>

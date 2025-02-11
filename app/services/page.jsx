@@ -5,76 +5,77 @@ const services = [
   title: "Website Development",
   description:
    "We design and develop responsive websites that are attractive and functional, tailored to meet your business needs.",
-  icon: "🌐", // You can replace this with an SVG icon
+  image: "/assets/5.png",
  },
  {
   title: "Mobile App Development",
   description:
    "Our team creates apps for iOS and Android, ensuring an optimal user experience and seamless functionality.",
-  icon: "📱",
+  image: "/assets/6.png",
  },
  {
   title: "E-commerce Solutions",
   description:
    "We build user-friendly and secure e-commerce platforms to help you sell your products online effectively.",
-  icon: "🛒",
+  image: "/assets/7.png",
  },
  {
   title: "SEO and Digital Marketing",
   description:
    "Our strategies are designed to increase your online visibility and attract more customers to your business.",
-  icon: "📈",
+  image: "/assets/8.png",
  },
  {
   title: "Maintenance and Support",
   description:
    "We provide ongoing maintenance and technical support services to ensure your systems run smoothly.",
-  icon: "🛠️",
+  image: "/assets/9.png",
  },
  {
   title: "IT Consulting",
   description:
    "Our consulting sessions help you find the right technology solutions tailored to your specific business needs.",
-  icon: "💼",
+  image: "/assets/10.png",
  },
 ];
 
 const Services = () => {
  return (
   <div className="">
-   <section className="h-screen justify-center items-center px-4 flex flex-col gap-5 overflow-hidden">
-    <h1 className="text-[60px] font-bold text-center mx-auto max-w-[500px]">
+   <section className="h-[650px] lg:h-screen justify-center items-center px-4 flex flex-col gap-5 overflow-hidden bg-[radial-gradient(ellipse_65%_75%_at_right,#354da1,#0f0f0f_66%)]">
+    <h1 className="text-[60px] font-bold text-center mx-auto max-w-[500px] neon-text">
      We Serve<span> All Of Your Needs</span>
     </h1>
     <p className="text-center text-lg">
      We really pay attention to our clients' needs, and we will continue to
      provide the best service
     </p>
-    <div className="flex flex-row gap-5">
-     <button className="p-2 bg-tulang text-hitam rounded-lg hover:outline hover:outline-tulang hover:bg-transparent hover:text-tulang">
-      <Link href="/">Contact Us</Link>
-     </button>
-     <button className="p-2 bg-hitam text-tulang rounded-lg outline outline-tulang ">
+    <div className="flex flex-row gap-5 font-semibold">
+     <button className="p-2 bg-primary hover:bg-primary/60 text-tulang rounded-lg">
       <Link href="/">Learn More About Us</Link>
      </button>
     </div>
    </section>
 
-   {services.map((service, index) => (
-    <section
-     key={index}
-     className="h-screen p-6 mb-6">
-     <div className="flex items-center mb-4">
-      <span className="text-5xl mr-4">{service.icon}</span>
+   <section className="min-h-screen p-6 mb-6 text-center grid grid-cols-1 lg:grid-cols-3">
+    {services.map((service, index) => (
+     <div
+      key={index}
+      className="flex flex-col gap-5 items-center mb-4">
+      <img
+       src={service.image}
+       className="w-[200px] animate-pulse"
+      />
+      <div className="neon-line mx-auto delay-400" />
       <h2 className="text-2xl font-semibold">{service.title}</h2>
+      <p className="text-gray-600">{service.description}</p>
      </div>
-     <p className="text-gray-600">{service.description}</p>
-    </section>
-   ))}
+    ))}
+   </section>
 
-   <section className="text-center mt-12">
+   <section className="text-center h-auto py-10">
     <h2 className="text-2xl font-bold">Ready to Elevate Your Business?</h2>
-    <button className="mt-4 bg-green-500 text-white py-2 px-6 rounded hover:bg-green-600 transition">
+    <button className="mt-4 bg-primary text-white py-2 px-6 rounded hover:bg-primary/60 transition font-semibold">
      Contact Us
     </button>
    </section>
@@ -83,20 +84,3 @@ const Services = () => {
 };
 
 export default Services;
-
-
-{/*<div className="relative w-full h-screen overflow-hidden bg-black">
-   <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 gap-0">
-    {Array.from({length: 100}).map((_, index) => (
-     <div
-      key={index}
-      className="w-full h-full border border-green-500 opacity-50 animate-pulse"
-      style={{
-       animationDelay: `${Math.random() * 2}s`,
-       animationDuration: `${Math.random() * 2 + 1}s`,
-      }}
-     />
-    ))}
-   </div>
-   <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500 opacity-30 animate-pulse" />
-  </div>*/}
