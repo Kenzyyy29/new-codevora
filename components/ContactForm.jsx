@@ -7,17 +7,23 @@ const ContactForm = () => {
   name: "",
   email: "",
   phone: "",
-  subject: "", 
+  subject: "",
   message: "",
+  consent: false,
  });
 
  const handleChange = (e) => {
-  const {name, value} = e.target;
-  setFormData({...formData, [name]: value});
+  const {name, value, type, checked} = e.target;
+  setFormData({...formData, [name]: type === "checkbox" ? checked : value});
  };
 
  const handleSubmit = async (e) => {
   e.preventDefault();
+  if (!formData.consent) {
+    alert("You must agree to send your data for follow-up processing.");
+    return
+  }
+
   const response = await fetch("https://formspree.io/f/xeoerwyj", {
    method: "POST",
    headers: {
@@ -28,98 +34,94 @@ const ContactForm = () => {
   });
 
   if (response.ok) {
-   alert("Pesan berhasil dikirim!");
-   setFormData({name: "", email: "", phone: "", subject: "", message: ""}); // Reset form
+   alert("Your message has been sent successfully!");
+   setFormData({name: "", email: "", phone: "", subject: "", message: "", consent:false}); 
   } else {
-   alert("Terjadi kesalahan, silakan coba lagi.");
+   alert("There was an error, please try again.");
   }
  };
 
  return (
-  <div className="max-w-md mx-auto mt-10">
-   <h2 className="text-2xl font-bold mb-6">Kontak Kami</h2>
+  <div className="w-full lg:max-w-md mx-auto">
+   <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
    <form
     onSubmit={handleSubmit}
-    className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    className="flex flex-col gap-4 bg-hitam bg-opacity-50 backdrop-blur-lg border rounded px-8 pt-6 pb-8 ">
     <div className="mb-4">
-     <label
-      className="block text-gray-700 text-sm font-bold mb-2"
-      htmlFor="name">
-      Nama
-     </label>
      <input
       type="text"
+      placeholder="Name"
       name="name"
       value={formData.name}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
     <div className="mb-4">
-     <label
-      className="block text-gray-700 text-sm font-bold mb-2"
-      htmlFor="email">
-      Alamat Email
-     </label>
      <input
       type="email"
+      placeholder="Email"
       name="email"
       value={formData.email}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulangleading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
     <div className="mb-4">
-     <label
-      className="block text-gray-700 text-sm font-bold mb-2"
-      htmlFor="phone">
-      No HP
-     </label>
      <input
       type="tel"
+      placeholder="Mobile Number"
       name="phone"
       value={formData.phone}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
     <div className="mb-4">
-     <label
-      className="block text-gray-700 text-sm font-bold mb-2"
-      htmlFor="subject">
-      Subjek
-     </label>
      <input
       type="text"
+      placeholder="Subject"
       name="subject"
       value={formData.subject}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
     <div className="mb-4">
-     <label
-      className="block text-gray-700 text-sm font-bold mb-2"
-      htmlFor="message">
-      Pesan
-     </label>
      <textarea
       name="message"
+      placeholder="Message"
       value={formData.message}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
+    <div className="mb-4 flex items-center">
+     <input
+      type="checkbox"
+      name="consent"
+      checked={formData.consent}
+      onChange={handleChange}
+      className="mr-2 leading-tight"
+      required
+     />
+     <label className="text-gray-700 text-sm">
+      I agree to send my data for follow-up processing.
+     </label>
+    </div>
     <div className="flex items-center justify-between">
+     <h1 className="text-2xl font-bold text-tulang">
+      CODEVORA<span className="text-primary">.</span>ID
+     </h1>
      <button
       type="submit"
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-      Kirim
+      className="bg-tulang hover:bg-tulang/60  text-hitam font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+      Send
      </button>
     </div>
    </form>

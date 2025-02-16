@@ -65,7 +65,7 @@ const MobileNav = () => {
     {/*Button*/}
     <button className="flex rounded-lg px-3 py-2 bg-tulang hover:bg-[#dedddd] mx-auto">
      <Link
-      href="/login"
+      href="/partner"
       className=" text-hitam text-xl font-medium">
       Become a partner?
      </Link>

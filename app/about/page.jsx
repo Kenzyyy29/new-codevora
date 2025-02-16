@@ -1,5 +1,8 @@
 import LogoCarousel from "@/components/Carousel";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const Vision = {
  title: "OUR VISION",
  items: [
@@ -37,22 +40,20 @@ const About = () => {
  return (
   <div>
    {/*About*/}
-   <section className="h-[650px] lg:h-screen bg-[radial-gradient(ellipse_100%_60%_at_center,#354da1,#0f0f0f_66%)] lg:bg-[radial-gradient(ellipse_100%_80%_at_center,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5">
-    <div className="items-center flex flex-col gap-5 my-auto">
-     <h1 className="text-3xl lg:text-6xl font-bold text-center">
+   <section className="h-[650px] lg:h-screen bg-[radial-gradient(ellipse_100%_60%_at_center,#354da1,#0f0f0f_66%)] lg:bg-[radial-gradient(ellipse_100%_65%_at_center,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5 px-10">
+    <div className="items-center flex flex-col gap-5 justify-center  text-center">
+     <h1 className="text-3xl lg:text-5xl font-bold">
       Want to grow up your bussiness? We're Here
      </h1>
+     <p>We always care about your needs, if you want to grew up your bussiness </p>
     </div>
    </section>
-   <hr className="h-px bg-gray-400 border-0 dark:bg-gray-700"></hr>
 
    {/*Logo Carousel*/}
-   <section className="flex flex-col gap-6 items-center py-4">
+   <section className="flex flex-col gap-6 items-center">
     <h1 className="text-2xl font-bold">Trusted by Many Companies</h1>
     <LogoCarousel />
    </section>
-
-   <hr className="h-px bg-gray-400 border-0 dark:bg-gray-700"></hr>
 
    {/*AboutCodevora*/}
    <section className="h-auto py-10 lg:py-[50px] lg:px-[250px] ">
