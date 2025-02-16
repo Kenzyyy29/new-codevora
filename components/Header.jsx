@@ -33,7 +33,7 @@ const Header = () => {
    {/*Button*/}
    <button className="hidden lg:flex rounded-lg px-3 py-1 bg-tulang hover:bg-tulang/60 font-semibold">
     <Link
-     href="/login"
+     href="/partner"
      className=" text-hitam">
      Become a Partner?
     </Link>
