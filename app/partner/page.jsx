@@ -11,7 +11,7 @@ const Partner = () => {
         <img
          src="/Logos/1.png"
          alt=""
-         className=" w-[320px] lg:w-[500px]"
+         className=" w-[320px] lg:w-[500px] mx-auto"
         />
         <div className="flex flex-col gap-2">
          <h1 className="text-4xl font-bold text-tulang">

@@ -51,7 +51,7 @@ const Services = () => {
      provide the best service
     </p>
     <div className="flex flex-row gap-5 font-semibold">
-     <button className="p-2 bg-primary hover:bg-primary/60 text-tulang rounded-lg">
+     <button className="p-2 bg-tulang hover:bg-[#dedddd] text-hitam rounded-lg">
       <Link href="/">Learn More About Us</Link>
      </button>
     </div>
@@ -75,9 +75,11 @@ const Services = () => {
 
    <section className="text-center h-auto py-10">
     <h2 className="text-2xl font-bold">Ready to Elevate Your Business?</h2>
-    <button className="mt-4 bg-primary text-white py-2 px-6 rounded hover:bg-primary/60 transition font-semibold">
-     Contact Us
-    </button>
+    <Link href="/partner">
+     <button className="mt-4 bg-primary text-white py-2 px-6 rounded hover:bg-primary/60 transition font-semibold">
+      Contact Us
+     </button>
+    </Link>
    </section>
   </div>
  );
