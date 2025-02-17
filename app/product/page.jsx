@@ -1,7 +1,6 @@
 const ProductPage = () => {
   return (
-   <div className="bg-hitam min-h-screen flex flex-col items-center">
-    <main className="flex-grow max-w-7xl mx-auto px-4 py-10 justify-center items-center">
+   <div className="bg-hitam min-h-screen items-center">
      <section className="bg-trasparent rounded-lg shadow-lg p-6">
       <h2 className="text-2xl font-semibold text-tulang mb-4">
        About Sellaris
@@ -15,7 +14,7 @@ const ProductPage = () => {
       <img
        src="/Logos/2.png"
        alt="Sellaris App"
-       className="w-full h-auto rounded-lg mb-4"
+       className="w-[500px] h-auto rounded-lg mb-4"
       />
      </section>
 
@@ -44,7 +43,6 @@ const ProductPage = () => {
        Unduh Sekarang
       </a>
      </section>
-    </main>
 
     <footer className="bg-transparent shadow w-full">
      <div className="max-w-7xl mx-auto px-4 py-6 text-center">
