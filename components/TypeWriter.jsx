@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const TypewriterText = () => {
   return (
-   <div className="text-2xl font-source-code text-center">
+   <div className="text-2xl 2xl:text-4xl font-source-code text-center">
     <Typewriter
      words={[
       "The Best Digital Solution for all of your own bussiness needs.",

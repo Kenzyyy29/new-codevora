@@ -43,16 +43,16 @@ const Services = () => {
  return (
   <div className="">
    <section className="h-[650px] lg:h-screen justify-center items-center px-4 flex flex-col gap-5 overflow-hidden bg-[radial-gradient(ellipse_65%_75%_at_right,#354da1,#0f0f0f_66%)]">
-    <h1 className="text-[60px] font-bold text-center mx-auto max-w-[500px] neon-text">
+    <h1 className="text-[60px] 2xl:text-[100px] font-bold text-center mx-auto max-w-[500px] 2xl:max-w-[800px] neon-text">
      We Serve<span> All Of Your Needs</span>
     </h1>
-    <p className="text-center text-lg">
+    <p className="text-center text-lg 2xl:text-2xl">
      We really pay attention to our clients' needs, and we will continue to
-     provide the best service
+     provide the best service.
     </p>
     <div className="flex flex-row gap-5 font-semibold">
-     <button className="p-2 bg-tulang hover:bg-[#dedddd] text-hitam rounded-lg">
-      <Link href="/">Learn More About Us</Link>
+     <button className="p-2 bg-tulang hover:bg-[#dedddd] text-hitam rounded-lg 2xl:text-xl">
+      <Link href="/about">Learn More About Us</Link>
      </button>
     </div>
    </section>
@@ -67,16 +67,16 @@ const Services = () => {
        className="w-[200px] animate-pulse"
       />
       <div className="neon-line mx-auto delay-400" />
-      <h2 className="text-2xl font-semibold">{service.title}</h2>
-      <p className="text-gray-600">{service.description}</p>
+      <h2 className="text-2xl 2xl:text-4xl font-semibold">{service.title}</h2>
+      <p className="text-tulang mx-24 2xl:text-xl">{service.description}</p>
      </div>
     ))}
    </section>
 
    <section className="text-center h-auto py-10">
-    <h2 className="text-2xl font-bold">Ready to Elevate Your Business?</h2>
+    <h2 className="text-2xl 2xl:text-4xl font-bold">Ready to Elevate Your Business?</h2>
     <Link href="/partner">
-     <button className="mt-4 bg-primary text-white py-2 px-6 rounded hover:bg-primary/60 transition font-semibold">
+     <button className="mt-4 bg-primary text-tulang py-2 px-6 rounded hover:bg-primary/60 transition font-semibold 2xl:text-xl">
       Contact Us
      </button>
     </Link>

@@ -7,7 +7,7 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
  return (
-  <header className="sticky z-10 top-0 flex p-8 lg:p-4 justify-between bg-hitam bg-opacity-95 backdrop-blur-md text-tulang px-[10px] lg:px-[40px] mx-auto border-b border-gray-500">
+  <header className="sticky z-10 top-0 flex p-8 lg:p-4 xl:p-6 justify-between bg-hitam bg-opacity-95 backdrop-blur-md text-tulang px-[10px] lg:px-[40px] mx-auto border-b border-gray-500">
    <div className="flex flex-row gap-10">
     {/*Logo*/}
     <Link href="/">

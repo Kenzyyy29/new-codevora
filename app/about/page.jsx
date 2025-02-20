@@ -42,21 +42,23 @@ const About = () => {
    {/*About*/}
    <section className="h-[650px] lg:h-screen bg-[radial-gradient(ellipse_100%_60%_at_center,#354da1,#0f0f0f_66%)] lg:bg-[radial-gradient(ellipse_100%_65%_at_center,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5 px-10">
     <div className="items-center flex flex-col gap-5 justify-center  text-center">
-     <h1 className="text-3xl lg:text-5xl font-bold">
+     <h1 className="text-3xl lg:text-5xl 2xl:text-[100px] font-bold">
       Want to grow up your bussiness? We're Here
      </h1>
-     <p>We always care about your needs, if you want to grew up your bussiness </p>
+     <p>
+      We always care about your needs, if you want to grew up your bussiness{" "}
+     </p>
     </div>
    </section>
 
    {/*Logo Carousel*/}
-   <section className="flex flex-col gap-6 items-center">
+   <section className=" flex-col gap-6 items-center hidden">
     <h1 className="text-2xl font-bold">Trusted by Many Companies</h1>
     <LogoCarousel />
    </section>
 
    {/*AboutCodevora*/}
-   <section className="h-auto py-10 lg:py-[50px] lg:px-[250px] ">
+   <section className="min-h-screen py-10 lg:py-[50px] lg:px-[250px] ">
     <div className="flex flex-col lg:flex-row gap-5 lg:gap-20 items-center my-auto ">
      <img
       src="/Logos/1.png"
