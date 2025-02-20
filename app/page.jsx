@@ -142,11 +142,11 @@ export default function Home() {
      <ul className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-10 justify-center hover:cursor-pointer mx-auto px-10">
       {Partner.items.map((item, index) => (
        <li key={index}>
-        <div className="space-y-5 p-4 w-full px-10 rounded-lg border 2xl:h-[500px]">
+        <div className="space-y-5 p-4 w-full px-10 bg-tulang bg-opacity-20 backdrop-blur-md rounded-lg border 2xl:h-[500px]">
          <h1 className="text-3xl 2xl:text-4xl font-medium 2xl:font-bold border-b-2 pb-4">
           {item.title}
          </h1>
-         <p className="2xl:text-xl text-balance">{item.description}</p>
+         <p className="2xl:text-[19px] ">{item.description}</p>
         </div>
        </li>
       ))}

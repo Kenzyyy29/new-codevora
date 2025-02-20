@@ -45,7 +45,7 @@ const About = () => {
      <h1 className="text-3xl lg:text-5xl 2xl:text-[100px] font-bold">
       Want to grow up your bussiness? We're Here
      </h1>
-     <p>
+     <p className="text-2xl">
       We always care about your needs, if you want to grew up your bussiness{" "}
      </p>
     </div>
@@ -58,7 +58,7 @@ const About = () => {
    </section>
 
    {/*AboutCodevora*/}
-   <section className="min-h-screen py-10 lg:py-[50px] lg:px-[250px] ">
+   <section className="min-h-screen py-10 lg:py-[50px] lg:px-[250px] flex flex-col items-center justify-center">
     <div className="flex flex-col lg:flex-row gap-5 lg:gap-20 items-center my-auto ">
      <img
       src="/Logos/1.png"

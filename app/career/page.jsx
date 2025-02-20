@@ -1,20 +1,68 @@
 import JobSearch from "./JobSearch";
 
+const WorkWithUs = {
+ title: "Why Work with Us?",
+ items: [
+  {
+   title: "Innovative Culture",
+   description:
+    "We foster a culture of innovation where new ideas are encouraged and valued. You will have the opportunity to work on exciting projects that challenge you and allow you to grow.",
+  },
+  {
+   title: "Professional Development",
+   description:
+    "We are committed to your professional growth. We offer training programs, workshops, and mentorship opportunities to help you enhance your skills and advance your career.",
+  },
+  {
+   title: "Collaborative Environment",
+   description:
+    " Our team is made up of diverse individuals who bring unique perspectives and expertise. We believe in teamwork and collaboration, and we support each other in achieving our goals.",
+  },
+  {
+   title: "Work-Life Balance",
+   description:
+    "We understand the importance of maintaining a healthy work-life balance. We offer flexible working arrangements to help you manage your personal and professional commitments.",
+  },
+  {
+   title: "Impactful Work",
+   description:
+    "At Codevora, your work will have a real impact on businesses and communities. You will be part of a team that is dedicated to creating innovative solutions that make a difference.",
+  },
+ ],
+};
+
 const Career = () => {
  return (
   <div className="main">
    <section className="h-[650px] lg:h-screen py-10 px-10 flex flex-col gap-5 justify-center bg-[radial-gradient(ellipse_70%_70%_at_center,#354da1,#0f0f0f_66%)]">
-    <div className="flex flex-col gap-2 items-center text-center">
-     <h1 className="text-4xl font-bold">Are you Ready to Grow Up with us?</h1>
-     <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus omnis
-      cum aperiam eaque commodi maiores nihil voluptatem repudiandae suscipit
-      incidunt.
+    <div className="flex flex-col gap-10 items-center text-center px-[400px]">
+     <h1 className="text-4xl 2xl:text-8xl font-bold">
+      Are you Ready to Grow Up with us?
+     </h1>
+     <p className="2xl:text-2xl">
+      We value our people as our greatest asset. We are looking for talented and
+      passionate individuals who want to make a difference in the digital
+      technology landscape.
      </p>
     </div>
    </section>
+
    <JobSearch />
-   <section className="h-96 border-t"></section>
+   <section className="min-h-screen flex flex-col gap-10 justify-center items-center px-10 mx-auto">
+    <h1 className=" 2xl:text-5xl font-bold neon-text">{WorkWithUs.title}</h1>
+    <ul className="grid grid-cols-1 2xl:grid-cols-3 gap-5 justify-center items-center text-center ">
+     {WorkWithUs.items.map((item) => (
+      <li
+       key={item.title}
+       className="flex flex-col gap-2 border max-w-[300px] p-4 2xl:h-[400px] rounded-lg items-center justify-center">
+       <h2 className="text-2xl 2xl:text-4xl font-semibold text-primary">
+        {item.title}
+       </h2>
+       <p className="text-lg 2xl:text-xl font-semibold">{item.description}</p>
+      </li>
+     ))}
+    </ul>
+   </section>
   </div>
  );
 };
