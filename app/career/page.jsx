@@ -34,12 +34,12 @@ const WorkWithUs = {
 const Career = () => {
  return (
   <div className="main">
-   <section className="h-[650px] lg:h-screen py-10 px-10 flex flex-col gap-5 justify-center bg-[radial-gradient(ellipse_70%_70%_at_center,#354da1,#0f0f0f_66%)]">
-    <div className="flex flex-col gap-10 items-center text-center px-[400px]">
-     <h1 className="text-4xl 2xl:text-8xl font-bold">
+   <section className="h-[650px] lg:h-screen py-10 px-10 flex flex-col gap-5 justify-center items-center bg-[radial-gradient(ellipse_70%_70%_at_center,#354da1,#0f0f0f_66%)]">
+    <div className="flex flex-col gap-10 items-center text-center 2xl:px-[400px]">
+     <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-bold">
       Are you Ready to Grow Up with us?
      </h1>
-     <p className="2xl:text-2xl">
+     <p className="text-lg lg:text-2xl 2xl:text-3xl ">
       We value our people as our greatest asset. We are looking for talented and
       passionate individuals who want to make a difference in the digital
       technology landscape.
@@ -48,13 +48,15 @@ const Career = () => {
    </section>
 
    <JobSearch />
-   <section className="min-h-screen flex flex-col gap-10 justify-center items-center px-10 mx-auto">
-    <h1 className=" 2xl:text-5xl font-bold neon-text">{WorkWithUs.title}</h1>
-    <ul className="grid grid-cols-1 2xl:grid-cols-3 gap-5 justify-center items-center text-center ">
+   <section className="min-h-screen flex flex-col gap-10 justify-center items-center px-10 mx-auto py-10">
+    <h1 className="text-3xl lg:text-5xl font-bold neon-text">
+     {WorkWithUs.title}
+    </h1>
+    <ul className="grid grid-cols-1 lg:grid-cols-3 gap-5 justify-center items-center text-center ">
      {WorkWithUs.items.map((item) => (
       <li
        key={item.title}
-       className="flex flex-col gap-2 border max-w-[300px] p-4 2xl:h-[400px] rounded-lg items-center justify-center">
+       className="flex flex-col gap-2 border max-w-[300px] p-4 lg:h-[300px] 2xl:h-[400px] rounded-lg items-center justify-center">
        <h2 className="text-2xl 2xl:text-4xl font-semibold text-primary">
         {item.title}
        </h2>
