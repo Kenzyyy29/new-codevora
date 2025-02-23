@@ -82,7 +82,7 @@ const SearchBox = () => {image:"/logos/1.png"
      value={searchTerm}
      onChange={(e) => setSearchTerm(e.target.value)}
     />
-    <div className="grid grid-cols-1 gap-10 items-center w-full">
+    <div className=" grid-cols-1 gap-10 items-center w-full hidden">
      {filteredItems.length > 0 ? (
       filteredItems.map((item, index) => (
        <div key={index}>
@@ -117,6 +117,9 @@ const SearchBox = () => {image:"/logos/1.png"
      ) : (
       <div className="p-2">No items found</div>
      )}
+    </div>
+    <div className="flex justify-center items-center">
+     <h1 className="text-3xl font-bold text-tulang/60">Sorry, the job vacancy is not available yet.</h1>
     </div>
    </div>
   </section>

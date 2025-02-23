@@ -42,7 +42,7 @@ const ContactForm = () => {
  };
 
  return (
-  <div className="w-full lg:max-w-md mx-auto">
+  <div className="w-full lg:max-w-md 2xl:max-w-xl mx-auto">
    <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
    <form
     onSubmit={handleSubmit}
@@ -54,7 +54,7 @@ const ContactForm = () => {
       name="name"
       value={formData.name}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 2xl:py-4 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
       name="email"
       value={formData.email}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulangleading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 2xl:py-4  bg-transparent text-tulangleading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
@@ -76,7 +76,7 @@ const ContactForm = () => {
       name="phone"
       value={formData.phone}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 2xl:py-4 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
@@ -87,7 +87,7 @@ const ContactForm = () => {
       name="subject"
       value={formData.subject}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 2xl:py-4 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
@@ -97,7 +97,7 @@ const ContactForm = () => {
       placeholder="Message"
       value={formData.message}
       onChange={handleChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded w-full py-2 px-3 2xl:h-[180px] bg-transparent text-tulang leading-tight focus:outline-none focus:shadow-outline"
       required
      />
     </div>
@@ -120,7 +120,7 @@ const ContactForm = () => {
      </h1>
      <button
       type="submit"
-      className="bg-tulang hover:bg-tulang/60  text-hitam font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+      className="bg-tulang hover:bg-tulang/60  text-hitam font-bold py-2 px-4 2xl:px-6 rounded focus:outline-none focus:shadow-outline">
       Send
      </button>
     </div>

@@ -45,13 +45,17 @@ const About = () => {
  return (
   <div>
    {/*About*/}
-   <section className="h-[650px] lg:h-screen bg-[radial-gradient(ellipse_100%_60%_at_center,#354da1,#0f0f0f_66%)] lg:bg-[radial-gradient(ellipse_100%_65%_at_center,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5 px-10">
+   <section className="h-screen bg-[radial-gradient(ellipse_100%_60%_at_center,#354da1,#0f0f0f_66%)] lg:bg-[radial-gradient(ellipse_100%_65%_at_center,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5 px-10">
     <div className="items-center flex flex-col gap-8 justify-center  text-center">
-     <h1 className="text-6xl lg:text-5xl 2xl:text-[100px] font-bold">
+     <h1 className="text-6xl lg:text-5xl 2xl:text-[100px] font-bold neon-text 2xl:max-w-[900px]">
       Want to grow up your bussiness? We're Here
      </h1>
-     <p className="text-xl">
-      We always care about your needs, if you want to grew up your bussiness
+     <p className="text-xl 2xl:max-w-[900px]">
+      In an ever-evolving digital era, Codevora Tech stands as a trusted partner
+      in delivering innovative technology solutions. Founded with a vision to
+      empower businesses through technology, we are committed to providing
+      services and products that help our clients achieve their goals more
+      efficiently and effectively.
      </p>
     </div>
    </section>
@@ -63,12 +67,12 @@ const About = () => {
    </section>
 
    {/*AboutCodevora*/}
-   <section className="min-h-screen py-10 lg:py-[50px] px-10 lg:px-[250px] flex flex-col items-center justify-center">
+   <section className="min-h-screen py-10 lg:py-[50px] px-10 lg:px-[150px] 2xl:px-[250px] flex flex-col items-center justify-center">
     <div className="flex flex-col lg:flex-row gap-5 lg:gap-20 items-center my-auto ">
      <img
       src="/Logos/1.png"
       alt=""
-      className="w-[300px] lg:w-[500px]"
+      className="w-[300px] lg:w-[400px] 2xl:2-[500px]"
      />
      <div className="flex flex-col gap-5 text-center lg:text-start">
       <h1 className="text-4xl lg:text-6xl font-bold">{AboutCodevora.title}</h1>
@@ -81,7 +85,7 @@ const About = () => {
    </section>
 
    {/*VISION & MISSION*/}
-   <section className="min-h-screen py-10 flex flex-col gap-10 items-center justify-center text-start px-10 lg:px-24 2xl:px-5 bg-[radial-gradient(ellipse_100%_60%_at_right,#354da1,#0f0f0f_66%)]">
+   <section className="min-h-screen py-10 flex flex-col gap-10 items-start justify-center text-start px-10 lg:px-24 2xl:px-[100px] bg-[radial-gradient(ellipse_100%_60%_at_right,#354da1,#0f0f0f_66%)] ">
     <h1 className="text-3xl 2xl:text-6xl font-bold neon-text">
      {Vision.title}
     </h1>

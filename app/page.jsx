@@ -1,6 +1,8 @@
 import TypewriterText from "@/components/TypeWriter";
 import Link from "next/link";
 
+
+
 export const metadata = {
  title: "Codevora Tech - The best digital solution for all of your own bussiness needs",
  description: "The best digital solutions of all your business needs",
@@ -67,15 +69,15 @@ const Project = {
 export default function Home() {
  return (
   <div>
-   <section className="h-[650px] lg:h-screen bg-[radial-gradient(ellipse_130%_120%_at_top_left,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5">
+   <section className="h-[650px] md:h-screen lg:h-screen bg-[radial-gradient(ellipse_130%_120%_at_top_left,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5">
     {/*LOGO*/}
     <img
      src="/Logos/1.png"
      alt=""
-     className="animate-bounce delay-700 h-[80px] animate-duration-[4000ms] 2xl:h-[200px] transition-all"
+     className="animate-bounce delay-700 h-[80px] animate-duration-[4000ms] md:h-[150px] lg:h-[150px] 2xl:h-[200px] transition-all"
     />
     {/* About */}
-    <h1 className="text-4xl lg:text-6xl 2xl:text-8xl font-bold">
+    <h1 className="text-4xl md:text-6xl lg:text-6xl 2xl:text-8xl font-bold">
      CODEVORA<span className="text-primary">.</span>ID
     </h1>
     <TypewriterText />
@@ -84,14 +86,14 @@ export default function Home() {
     </button>
    </section>
 
-   <section className="h-screen bg-[radial-gradient(ellipse_65%_75%_at_right,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5">
+   <section className="h-screen bg-[radial-gradient(ellipse_65%_75%_at_right,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5 px-10">
     <div className="flex flex-col lg:flex-row gap-[100px] lg:gap-[200px] justify-center items-center">
-     <div className="flex flex-col gap-5 max-w-[400px] 2xl:max-w-[700px] items-center lg:items-start text-center lg:text-start mx-auto lg:mx-0">
+     <div className="flex flex-col gap-5 max-w-[400px] md:max-w-[600px] lg:max-w-[600px] 2xl:max-w-[700px] items-center lg:items-start text-center lg:text-start mx-auto lg:mx-0">
       <h1 className="text-tulang text-4xl 2xl:text-6xl font-bold">
        WHAT IS CODEVORA?
       </h1>
       <div className="neon-line delay-400" />
-      <p className="2xl:text-3xl">
+      <p className="md:text-2xl lg:text-2xl 2xl:text-3xl">
        Codevora is a startup company that operates in the field of digital
        technology. Our goal is to create and develop new innovations in the
        digital world to facilitate business operations at both the micro and
@@ -101,7 +103,7 @@ export default function Home() {
      <img
       src="/Logos/1.png"
       alt=""
-      className="h-[200px] w-[350px] lg:h-[300px] lg:w-[500px]"
+      className="h-[200px] w-[350px] lg:h-[250px] lg:w-[400px] 2xl:h-[300px] 2xl:w-[500px]"
      />
     </div>
    </section>
@@ -112,7 +114,7 @@ export default function Home() {
      <div className="flex flex-col gap-3">
       <h1 className="text-3xl 2xl:text-5xl font-bold">{Project.title}</h1>
      </div>
-     <div className="grid grid-cols-1 lg:grid-cols-2 gap-[150px] 2xl:gap-30 justify-center hover:cursor-pointer items-center">
+     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[150px] 2xl:gap-30 justify-center hover:cursor-pointer items-center">
       {Project.items.map((item, index) => (
        <div key={index}>
         <div className="  p-2 w-full px-10 h-[300px] rounded-lg flex flex-col gap-5">
@@ -142,7 +144,7 @@ export default function Home() {
      <ul className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-10 justify-center hover:cursor-pointer mx-auto px-10">
       {Partner.items.map((item, index) => (
        <li key={index}>
-        <div className="space-y-5 p-4 w-full px-10 bg-tulang bg-opacity-20 backdrop-blur-md rounded-lg border 2xl:h-[500px]">
+        <div className="space-y-5 p-4 w-full px-10 bg-tulang bg-opacity-20 backdrop-blur-md rounded-lg border lg:h-[300px] 2xl:h-[450px]">
          <h1 className="text-3xl 2xl:text-4xl font-medium 2xl:font-bold border-b-2 pb-4">
           {item.title}
          </h1>

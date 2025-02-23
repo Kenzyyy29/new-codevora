@@ -21,10 +21,6 @@ const links = [
   path: "/about",
  },
  {
-  name: "Product",
-  path: "/product",
- },
- {
   name: "Career",
   path: "/career",
  },

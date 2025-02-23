@@ -42,7 +42,7 @@ const services = [
 const Services = () => {
  return (
   <div className="">
-   <section className="h-[650px] lg:h-screen justify-center items-center px-4 flex flex-col gap-5 overflow-hidden bg-[radial-gradient(ellipse_65%_75%_at_right,#354da1,#0f0f0f_66%)]">
+   <section className="h-screen justify-center items-center px-6 flex flex-col gap-5 overflow-hidden bg-[radial-gradient(ellipse_65%_75%_at_right,#354da1,#0f0f0f_66%)]">
     <h1 className="text-[60px] 2xl:text-[100px] font-bold text-center mx-auto max-w-[500px] 2xl:max-w-[800px] neon-text">
      We Serve<span> All Of Your Needs</span>
     </h1>
