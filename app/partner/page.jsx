@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 const Partner = () => {
     return (
      <div>
-      <section className="h-screen bg-[radial-gradient(ellipse_130%_120%_at_top_right,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-[50px] lg:flex-row lg:gap-[200px] 2xl:gap-[400px] px-10 py-10">
+      <section className="min-h-screen bg-[radial-gradient(ellipse_130%_120%_at_top_right,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-[50px] lg:flex-row lg:gap-[200px] 2xl:gap-[400px] px-10 py-10">
        <div className="w-full max-w-md 2xl:max-w-xl">
         <ContactForm />
        </div>

@@ -109,7 +109,7 @@ export default function Home() {
    </section>
 
    {/*Project*/}
-   <section className="h-auto lg:min-h-screen py-10 2xl:py-24">
+   <section className="min-h-screen py-10 2xl:py-24">
     <div className="text-center flex flex-col gap-10">
      <div className="flex flex-col gap-3">
       <h1 className="text-3xl 2xl:text-5xl font-bold">{Project.title}</h1>
