@@ -1,10 +1,9 @@
 import TypewriterText from "@/components/TypeWriter";
 import Link from "next/link";
 
-
-
 export const metadata = {
- title: "Codevora Tech - The best digital solution for all of your own bussiness needs",
+ title:
+  "Codevora Tech - The best digital solution for all of your own bussiness needs",
  description: "The best digital solutions of all your business needs",
 };
 
@@ -111,29 +110,29 @@ export default function Home() {
    {/*Project*/}
    <section className="min-h-screen py-10 2xl:py-24">
     <div className="text-center flex flex-col gap-10">
-     <div className="flex flex-col gap-3">
+     <div className="flex flex-col gap-5">
       <h1 className="text-3xl 2xl:text-5xl font-bold">{Project.title}</h1>
-     </div>
-     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[150px] 2xl:gap-30 justify-center hover:cursor-pointer items-center">
-      {Project.items.map((item, index) => (
-       <div key={index}>
-        <div className="  p-2 w-full px-10 h-[300px] rounded-lg flex flex-col gap-5">
-         <img
-          src={item.image}
-          alt=""
-          className="h-[150px] 2xl:h-[200px] my-auto mx-auto animate-pulse"
-         />
-         <h1 className="text-tulang text-3xl font-semibold">{item.name}</h1>
-         <p className="2xl:text-lg px-10">{item.description}</p>
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[200px] lg:gap-[150px] 2xl:gap-30 justify-center hover:cursor-pointer items-center">
+       {Project.items.map((item, index) => (
+        <div key={index}>
+         <div className="  p-2 w-full px-10 h-[300px] rounded-lg flex flex-col gap-5">
+          <img
+           src={item.image}
+           alt=""
+           className="h-[150px] 2xl:h-[200px] my-auto mx-auto animate-pulse"
+          />
+          <h1 className="text-tulang text-3xl font-semibold">{item.name}</h1>
+          <p className="2xl:text-lg px-10">{item.description}</p>
+         </div>
         </div>
-       </div>
-      ))}
+       ))}
+      </div>
      </div>
     </div>
    </section>
 
    {/* Partner Journey */}
-   <section className="min-h-screen py-10 bg-[radial-gradient(ellipse_100%_75%_at_left,#354da1,#0f0f0f_66%)] justify-center items-center flex flex-col gap-5">
+   <section className="min-h-screen py-20 bg-[radial-gradient(ellipse_100%_75%_at_left,#354da1,#0f0f0f_66%)] justify-center items-center flex flex-col gap-5">
     <div className="text-center flex flex-col gap-10 2xl:gap-24">
      <div className="flex flex-col gap-5 max-w-[350px] 2xl:max-w-[800px] mx-auto ">
       <h1 className="text-4xl 2xl:text-5xl font-bold text-tulang neon-text">

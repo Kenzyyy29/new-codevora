@@ -72,7 +72,7 @@ const SearchBox = () => {image:"/logos/1.png"
  };
 
  return (
-  <section className="h-[1050px] lg:h-[850px] text-center px-10 py-10">
+  <section className="h-[1050px] lg:h-[850px] text-center lg:px-10 py-10">
    <h1 className="text-3xl lg:text-4xl font-bold">Search your interest here</h1>
    <div className="p-4 flex flex-col gap-5 items-center justify-center">
     <input

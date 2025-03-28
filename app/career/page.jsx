@@ -35,7 +35,7 @@ const Career = () => {
  return (
   <div className="main">
    <section className="h-screen py-10 px-10 flex flex-col gap-5 justify-center items-center bg-[radial-gradient(ellipse_70%_70%_at_center,#354da1,#0f0f0f_66%)]">
-    <div className="flex flex-col gap-10 items-center text-center  2xl:px-[400px]">
+    <div className="flex flex-col gap-10 items-center text-center 2xl:px-[400px]">
      <h1 className="text-5xl md:text-6xl lg:text-6xl 2xl:text-8xl font-bold">
       Are you Ready to Grow Up with us?
      </h1>

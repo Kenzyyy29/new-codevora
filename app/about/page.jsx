@@ -47,7 +47,7 @@ const About = () => {
    {/*About*/}
    <section className="h-screen bg-[radial-gradient(ellipse_100%_60%_at_center,#354da1,#0f0f0f_66%)] lg:bg-[radial-gradient(ellipse_100%_65%_at_center,#354da1,#0f0f0f_66%)] text-tulang justify-center mx-auto items-center flex flex-col gap-5 px-10">
     <div className="items-center flex flex-col gap-8 justify-center  text-center">
-     <h1 className="text-6xl lg:text-5xl 2xl:text-[100px] font-bold neon-text 2xl:max-w-[900px]">
+     <h1 className="text-5xl 2xl:text-[100px] font-bold neon-text 2xl:max-w-[900px]">
       Want to grow up your bussiness? We're Here
      </h1>
      <p className="text-xl 2xl:max-w-[900px]">
