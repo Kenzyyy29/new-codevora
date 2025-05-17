@@ -2,45 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
 
 .neon-line {
-  width: 300px;
-  height: 4px;
-  background-color: #f4f4f4;
-  border-radius: 2px;
-  position: relative;
-  animation: neon 1.5s ease-in-out infinite alternate;
+ width: 300px;
+ height: 4px;
+ background-color: #f4f4f4;
+ border-radius: 2px;
+ position: relative;
+ animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 .neon-text {
-  text-shadow: 
-    0 0 5px rgba(53, 77, 161, 0.7), 
-    0 0 10px rgba(53, 77, 161, 0.7), 
-    0 0 15px rgba(53, 77, 161, 0.7), 
-    0 0 20px rgba(53, 77, 161, 0.7), 
-    0 0 25px rgba(53, 77, 161, 0.7);
+ text-shadow: 0 0 5px rgba(53, 77, 161, 0.7), 0 0 10px rgba(53, 77, 161, 0.7),
+  0 0 15px rgba(53, 77, 161, 0.7), 0 0 20px rgba(53, 77, 161, 0.7),
+  0 0 25px rgba(53, 77, 161, 0.7);
 }
 
 @keyframes neon {
-  0% {
-    box-shadow: 0 0 5px #354da1, 0 0 10px #354da1, 0 0 15px #354da1;
-  }
-  100% {
-    box-shadow: 0 0 20px #354da1, 0 0 30px #354da1, 0 0 40px #354da1;
-  }
+ 0% {
+  box-shadow: 0 0 5px #354da1, 0 0 10px #354da1, 0 0 15px #354da1;
+ }
+ 100% {
+  box-shadow: 0 0 20px #354da1, 0 0 30px #354da1, 0 0 40px #354da1;
+ }
 }
 
 .delay-200 {
-  animation-delay: 0.2s;
+ animation-delay: 0.2s;
 }
 
 .delay-400 {
-  animation-delay: 0.4s;
+ animation-delay: 0.4s;
 }
 
 @layer base {
-  :root {
-    --radius: 0.5rem;
-  }
+ :root {
+  --radius: 0.5rem;
+ }
+}
+
+@keyframes float1 {
+ 0%,
+ 100% {
+  transform: translate(0, 0);
+ }
+ 50% {
+  transform: translate(-20px, -20px);
+ }
+}
+
+@keyframes float2 {
+ 0%,
+ 100% {
+  transform: translate(0, 0);
+ }
+ 50% {
+  transform: translate(15px, 15px);
+ }
+}
+
+@keyframes float3 {
+ 0%,
+ 100% {
+  transform: translate(0, 0);
+ }
+ 50% {
+  transform: translate(10px, -10px);
+ }
+}
+
+.animate-float1 {
+ animation: float1 8s ease-in-out infinite;
+}
+
+.animate-float2 {
+ animation: float2 10s ease-in-out infinite;
+}
+
+.animate-float3 {
+ animation: float3 12s ease-in-out infinite;
 }

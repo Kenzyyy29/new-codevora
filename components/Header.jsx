@@ -1,43 +1,37 @@
 import Link from "next/link";
-
-//components
-import Logo from "./Logo";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import Logo from "./Logo";
 
 const Header = () => {
  return (
-  <header className="sticky z-10 top-0 flex p-8 lg:p-4 xl:p-6 justify-between bg-hitam bg-opacity-95 backdrop-blur-md text-tulang px-[10px] lg:px-[40px] mx-auto border-b border-gray-500">
-   <div className="flex flex-row gap-10">
-    {/*Logo*/}
-    <Link href="/">
-     <div className="flex flex-row gap-2">
-      <Logo />
-      <h1 className="text-2xl font-bold text-tulang my-auto">
-       CODEVORA<span className="text-primary">.</span>ID
-      </h1>
-     </div>
-    </Link>
-
-    {/*Nav*/}
-    <ul className="hidden lg:flex space-x-10 text-white my-auto text-base font-semibold">
-     <Nav />
-    </ul>
-   </div>
-
-   {/*Mobile Nav*/}
-   <div className="lg:hidden">
-    <MobileNav />
-   </div>
-
-   {/*Button*/}
-   <button className="hidden lg:flex rounded-lg px-3 py-1 bg-tulang hover:bg-tulang/60 font-semibold">
+  <header className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-md border-b border-gray-800 px-4 sm:px-6 lg:px-8 py-4">
+   <div className="flex items-center justify-between max-w-7xl mx-auto">
+    {/* Logo */}
     <Link
-     href="/partner"
-     className=" text-hitam">
-     Become a Partner?
+     href="/"
+     className="flex items-center gap-3 group">
+     <Logo />
+     <h1 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">
+      CODEVORA<span className="text-primary">.</span>ID
+     </h1>
     </Link>
-   </button>
+
+    {/* Desktop Navigation */}
+    <div className="hidden lg:flex items-center gap-10">
+     <Nav />
+     <Link
+      href="/partner"
+      className="px-4 py-2 bg-primary text-black rounded-lg hover:bg-primary/90 font-medium transition-all transform hover:scale-105">
+      Become a Partner
+     </Link>
+    </div>
+
+    {/* Mobile Navigation */}
+    <div className="lg:hidden">
+     <MobileNav />
+    </div>
+   </div>
   </header>
  );
 };

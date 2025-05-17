@@ -2,180 +2,143 @@
 
 import {FaDiscord, FaLinkedinIn, FaInstagram} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
+import Link from "next/link";
 
-const Icon = {
- items: [
-  {
-   path: "https://www.linkedin.com/",
-   icon: <FaLinkedinIn />,
-  },
-  {
-   path: "https://discord.gg/wAqeHbCb",
-   icon: <FaDiscord />,
-  },
-  {
-   path:
-    "https://www.instagram.com/codevoraid?igsh=MTcya25wNmhkb2NrNA%3D%3D&utm_source=qr",
-   icon: <FaInstagram />,
-  },
-  {
-   path: "https://x.com/codevoraid",
-   icon: <FaXTwitter />,
-  },
- ],
-};
+const socialLinks = [
+ {
+  path: "https://www.linkedin.com/",
+  icon: <FaLinkedinIn className="text-xl" />,
+  name: "LinkedIn",
+ },
+ {
+  path: "https://discord.gg/wAqeHbCb",
+  icon: <FaDiscord className="text-xl" />,
+  name: "Discord",
+ },
+ {
+  path: "https://www.instagram.com/codevoraid",
+  icon: <FaInstagram className="text-xl" />,
+  name: "Instagram",
+ },
+ {
+  path: "https://x.com/codevoraid",
+  icon: <FaXTwitter className="text-xl" />,
+  name: "Twitter",
+ },
+];
 
 const services = {
  title: "OUR SERVICES",
  items: [
-  {
-   name: "Website Development",
-   path: "/services",
-  },
-  {
-   name: "Mobile App Development",
-   path: "/services",
-  },
-  {
-   name: "E-Commerce Solutions",
-   path: "/services",
-  },
-  {
-   name: "SEO and Digital Marketing",
-   path: "/services",
-  },
-  {
-   name: "Maintenance and Support",
-   path: "/services",
-  },
-  {
-   name: "IT Consulting",
-   path: "/services",
-  },
+  {name: "Website Development", path: "/services"},
+  {name: "Mobile App Development", path: "/services"},
+  {name: "E-Commerce Solutions", path: "/services"},
+  {name: "SEO and Digital Marketing", path: "/services"},
+  {name: "Maintenance and Support", path: "/services"},
+  {name: "IT Consulting", path: "/services"},
  ],
 };
 
-const profile = {
- title: "COMPANY PROFILE",
+const company = {
+ title: "COMPANY",
  items: [
-  {
-   name: "About Us",
-   path: "/About",
-  },
-  {
-   name: "Product",
-   path: "/product",
-  },
-  {
-   name: "Career",
-   path: "/career",
-  },
-  {
-   name: "Contact Us",
-   path: "/contact",
-  },
+  {name: "About Us", path: "/about"},
+  {name: "Products", path: "/products"},
+  {name: "Career", path: "/career"},
+  {name: "Contact Us", path: "/contact"},
  ],
 };
-
-
-import Link from "next/link";
 
 const currentYear = new Date().getFullYear();
 
-export default function FooterWithSocialLinks() {
+export default function Footer() {
  return (
-  <footer className="flex flex-wrap justify-center py-10 px-10 bg-hitam border-t border-gray-500 shadow-md text-tulang">
-   {/* Section 1 */}
-   <div className="flex flex-col justify-start py-5 px-2 lg:basis-[20%] md:basis-[35%] basis-[100%] items-center">
-    {/* Gambar */}
-    <div className="flex flex-col gap-4 justify-center">
-     <img
-      src="/Logos/1.png"
-      className="w-[70%] mx-auto"
-      alt="Logo Footer"
-     />
-    </div>
-    <div className="flex flex-row text-center max-w-[200px]">
-     <p className="lg:text-sm text-xs font-thin pt-5 2xl:ml-2 lg:ml-2 ml-3">
-      THE BEST DIGITAL SOLUTION FOR ALL OF YOUR OWN BUSSINESS NEEDS
-     </p>
-    </div>
-    {/* Deskripsi */}
-   </div>
-
-   {/* Section 2 */}
-   <div className="flex flex-col justify-start lg:gap-7 gap-5 py-5 px-5 lg:basis-[35%] md:basis-[65%] basis-[100%] ">
-    {/* #1 Alamat Kami */}
-    <div className=" flex flex-col gap-1">
-     <div className="flex flex-row justify-start">
-      <h1 className="text-lg font-bold text-start">OUR ADDRESS</h1>
-     </div>
-     <div className="flex flex-row justify-start">
-      <p className="text-sm font-light text-start">
-       Jl. Arthamulya 01, No. 29, Kecamatan Cibereum, Kelurahan Kotabaru, Kota
-       Tasikmalaya, Jawa Barat, Indonesia 46196.
+  <footer className="bg-black text-gray-300 border-t border-gray-800">
+   <div className="container mx-auto px-4 py-12 lg:py-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+     {/* Brand Info */}
+     <div className="flex flex-col items-center md:items-start">
+      <Link
+       href="/"
+       className="mb-6">
+       <img
+        src="/Logos/1.png"
+        className="h-16 w-auto"
+        alt="Codevora Logo"
+       />
+      </Link>
+      <p className="text-sm text-center md:text-left max-w-xs">
+       The best digital solution for all of your business needs
       </p>
      </div>
-    </div>
-    {/* #2 Follow Us */}
-    <div className=" flex flex-col gap-3">
-     <div className="flex flex-row justify-start">
-      <h1 className="text-lg font-bold text-start">FOLLOW US</h1>
+
+     {/* Address */}
+     <div className="flex flex-col">
+      <h3 className="text-lg font-bold text-white mb-4">OUR ADDRESS</h3>
+      <address className="text-sm not-italic">
+       Jl. Arthamulya 01, No. 29, Kecamatan Cibereum,
+       <br />
+       Kelurahan Kotabaru, Kota Tasikmalaya,
+       <br />
+       Jawa Barat, Indonesia 46196.
+      </address>
      </div>
-     <ul className="flex flex-row gap-5 justify-start">
-      {Icon.items.map((item, index) => (
+
+     {/* Services */}
+     <div className="flex flex-col">
+      <h3 className="text-lg font-bold text-white mb-4">{services.title}</h3>
+      <ul className="space-y-2">
+       {services.items.map((item, index) => (
+        <li key={index}>
+         <Link
+          href={item.path}
+          className="text-sm hover:text-primary transition-colors">
+          {item.name}
+         </Link>
+        </li>
+       ))}
+      </ul>
+     </div>
+
+     {/* Company */}
+     <div className="flex flex-col">
+      <h3 className="text-lg font-bold text-white mb-4">{company.title}</h3>
+      <ul className="space-y-2">
+       {company.items.map((item, index) => (
+        <li key={index}>
+         <Link
+          href={item.path}
+          className="text-sm hover:text-primary transition-colors">
+          {item.name}
+         </Link>
+        </li>
+       ))}
+      </ul>
+     </div>
+    </div>
+
+    {/* Social Links */}
+    <div className="mt-12 pt-8 border-t border-gray-800">
+     <h3 className="text-lg font-bold text-white mb-4 text-center md:text-left">
+      FOLLOW US
+     </h3>
+     <div className="flex justify-center md:justify-start gap-4">
+      {socialLinks.map((link, index) => (
        <Link
         key={index}
-        href={item.path}>
-        <li className=" inline-block rounded-full bg-tulang hover:bg-tulang/60 p-5 leading-normal shadow-md focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-         <div className="text-hitam text-[25px]">{item.icon}</div>
-        </li>
+        href={link.path}
+        aria-label={link.name}
+        className="p-3 bg-gray-800 rounded-full hover:bg-primary hover:text-black transition-all">
+        {link.icon}
        </Link>
       ))}
-     </ul>
+     </div>
     </div>
-   </div>
 
-   {/* Section 3 */}
-   <div className="flex flex-col justify-start py-5 px-5 lg:basis-[20%] md:basis-[50%] basis-[100%] ">
-    {/*Layanan*/}
-    <ul>
-     {/* Title */}
-     <li>
-      <h1 className="text-lg font-bold text-start mb-1">{services.title}</h1>
-     </li>
-     {/* Content */}
-     {services.items.map((item, index) => (
-      <ul key={index}>
-       <Link href={item.path}>
-        <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
-         {item.name}
-        </li>
-       </Link>
-      </ul>
-     ))}
-    </ul>
-   </div>
-
-   {/* Section 4 */}
-   <div className="flex flex-col justify-start py-5 px-5 lg:basis-[20%] md:basis-[50%] basis-[100%] ">
-    {/*Layanan*/}
-    <ul>
-     {/* Title */}
-     <li>
-      <h1 className="text-lg font-bold text-start mb-1">{profile.title}</h1>
-     </li>
-     {/* Content */}
-     {profile.items.map((item, index) => (
-      <ul key={index}>
-       <Link href={item.path}>
-        <li className="mb-3 text-sm font-thin text-start hover:text-blue-300">
-         {item.name}
-        </li>
-       </Link>
-      </ul>
-     ))}
-    </ul>
+    {/* Copyright */}
+    <div className="mt-8 text-center text-sm text-gray-500">
+     © {currentYear} Codevora.id. All rights reserved.
+    </div>
    </div>
   </footer>
  );

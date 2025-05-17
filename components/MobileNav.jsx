@@ -4,12 +4,10 @@ import {
  Sheet,
  SheetContent,
  SheetTrigger,
- SheetTitle,
 } from "@/components/ui/sheet";
 import {usePathname} from "next/navigation";
 import Link from "next/link";
 import {CiMenuFries} from "react-icons/ci";
-import Logo from "./Logo";
 
 const links = [
  {
@@ -31,41 +29,41 @@ const MobileNav = () => {
  return (
   <Sheet>
    <SheetTrigger className="flex justify-center items-center">
-    <CiMenuFries className="text-[32px] text-accent" />
+    <CiMenuFries className="text-3xl text-white hover:text-primary transition-colors" />
    </SheetTrigger>
-   <SheetContent className="flex flex-col mx-auto">
-    <SheetTitle className="hidden" />
-    {/*Logo*/}
-    <div className="flex flex-col mx-auto mt-20 mb-24 text-2xl">
-     <Link href="/">
-      <h1 className="text-4xl font-bold">
+   <SheetContent className="flex flex-col bg-[#0f0f0f] border-l border-gray-800">
+    <div className="flex flex-col items-center mt-10 mb-12">
+     <Link
+      href="/"
+      className="group">
+      <h1 className="text-4xl font-bold text-white group-hover:text-primary transition-colors">
        CODEVORA<span className="text-primary">.</span>ID
       </h1>
      </Link>
     </div>
-    {/*nav*/}
-    <nav className="flex flex-col justify-center items-center gap-8">
-     {links.map((link, index) => {
-      return (
-       <Link
-        href={link.path}
-        key={index}
-        className={`${
-         link.path === pathname && "text-primary border-b-2 border-primary"
-        } capitalize text-xl hover:text-primary transition-all`}>
-        {link.name}
-       </Link>
-      );
-     })}
+
+    <nav className="flex flex-col items-center gap-6">
+     {links.map((link, index) => (
+      <Link
+       href={link.path}
+       key={index}
+       className={`text-xl capitalize transition-all duration-300 ${
+        link.path === pathname
+         ? "text-primary font-semibold"
+         : "text-gray-300 hover:text-white"
+       }`}>
+       {link.name}
+      </Link>
+     ))}
     </nav>
-    {/*Button*/}
-    <button className="flex rounded-lg px-3 py-2 bg-tulang hover:bg-[#dedddd] mx-auto">
+
+    <div className="mt-auto mb-8 flex justify-center">
      <Link
       href="/partner"
-      className=" text-hitam text-xl font-medium">
-      Become a partner?
+      className="px-6 py-3 bg-primary text-black rounded-lg hover:bg-primary/90 font-medium transition-all transform hover:scale-105 text-center w-full max-w-xs">
+      Become a Partner
      </Link>
-    </button>
+    </div>
    </SheetContent>
   </Sheet>
  );
